@@ -1,0 +1,140 @@
+*{
+    margin: 0px ;
+    padding: 0px;
+    text-align: center;
+}
+h1{
+    background-color: black;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.choice{
+    height: 160px;
+    width: 160px;
+    margin-top: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;               /* ڈبہ سکڑ کر بگڑے گا نہیں */
+    transition: background-color 0.2s;
+}
+.choice img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.choice:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.score-board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    font-size: 30px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-top: 3rem;
+}
+#user-score,#computer-score{
+    font-size:4rem;
+}
+.msg-box{
+    margin-top: 4rem;
+}
+#msg{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* ٹیبلٹ */
+@media (max-width: 1024px) {
+    .choice{
+        height: 140px;
+        width: 140px;
+    }
+    .choice img{
+        height: 130px;
+        width: 130px;
+    }
+}
+
+/* موبائل */
+@media (max-width: 600px) {
+    h1{
+        font-size: 1.6rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+    .choices{
+        gap: 0.8rem;
+    }
+    .choice{
+        height: 95px;
+        width: 95px;
+        margin-top: 3rem;
+    }
+    .choice img{
+        height: 88px;
+        width: 88px;
+    }
+    .score-board{
+        gap: 3rem;
+        font-size: 22px;
+        margin-top: 2rem;
+    }
+    #user-score,#computer-score{
+        font-size: 3rem;
+    }
+    .msg-box{
+        margin-top: 2.5rem;
+        padding: 0 10px;
+    }
+    #msg{
+        font-size: 22px;
+    }
+}
+
+/* چھوٹا موبائل */
+@media (max-width: 380px) {
+    .choices{
+        gap: 0.5rem;
+    }
+    .choice{
+        height: 82px;
+        width: 82px;
+    }
+    .choice img{
+        height: 76px;
+        width: 76px;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+    .score-board{
+        gap: 2rem;
+        font-size: 18px;
+    }
+    #user-score,#computer-score{
+        font-size: 2.5rem;
+    }
+    #msg{
+        font-size: 18px;
+    }
+}
